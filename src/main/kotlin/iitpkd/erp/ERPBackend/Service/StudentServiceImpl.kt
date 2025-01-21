@@ -8,7 +8,5 @@ import org.springframework.stereotype.Service
 
 @Service
 class StudentServiceImpl(val studentRepo: StudentRepo): StudentService {
-    override fun getStudentByRollNo(rollNo: String): Student? {
-        return studentRepo.findByRollNo(rollNo).orElse(null);
-    }
+    override fun getStudentByRollNo(rollNo: String) = studentRepo.findByRollNo(rollNo);
 }

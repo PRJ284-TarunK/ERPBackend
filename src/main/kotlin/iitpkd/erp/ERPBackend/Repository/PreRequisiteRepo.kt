@@ -9,5 +9,6 @@ import java.util.Optional
 @Repository
 interface PreRequisiteRepo: MongoRepository<PreRequisite, String> {
 //    @Query("{ 'studentRollNo': ?0, 'courseCode': ?1 }")
-    fun findByStudentRollNoAndCourseCode(studentRollNo: String, courseCode: String): Optional<List<PreRequisite>>;
+    fun findByStudentRollNoAndCourseCode(studentRollNo: String, courseCode: String): List<PreRequisite>?;
+    fun findByStudentRollNo(studentRollNo: String): List<PreRequisite>?;
 }

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service
 @Service
 interface PreRequisiteService {
     fun createPreRequisite(request: PreRequisiteReq): PreRequisite?;
+    fun getPreRequisitesByStudentRollNo(studentRollNo: String): List<PreRequisite>?;
 }

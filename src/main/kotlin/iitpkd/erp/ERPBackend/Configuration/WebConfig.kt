@@ -19,4 +19,5 @@ class WebConfig {
         source.registerCorsConfiguration("/**", config)
         return CorsFilter(source)
     }
+
 }

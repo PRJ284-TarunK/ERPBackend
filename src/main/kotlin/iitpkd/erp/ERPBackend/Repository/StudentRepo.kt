@@ -7,5 +7,5 @@ import java.util.Optional
 
 @Repository
 interface StudentRepo: MongoRepository<Student, String> {
-    fun findByRollNo(rollNo: String): Optional<Student>;
+    fun findByRollNo(rollNo: String): Student?;
 }
